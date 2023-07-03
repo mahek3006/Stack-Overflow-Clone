@@ -11,7 +11,7 @@ import Users from "./pages/Users/Users";
 import UserProfile from "./pages/UserProfile/UserProfile";
 import Community from "./pages/Community/Community";
 import CreatePost from "./pages/CreatePost/CreatePost";
-import FeedPost from "./components/CommunityNavbar/FeedPost";
+import PostDetails from "./pages/PostDetails/PostDetails";
 import ArticalPlan from "./pages/ArticalPlan/ArticalPlan";
 import Otp from "./pages/Otp/Otp";
 
@@ -28,9 +28,9 @@ const AllRoutes = () => {
       <Route path="/Users/:id" element={<UserProfile />} />
       <Route path="/Community/" element={<Community />} />
       <Route path="/CreatePost/" element={<CreatePost />} />
-      <Route path="/FeedPost/:id" element={<FeedPost />} />
+      <Route path="/Community/:id" element={<PostDetails />} />
       <Route path="/articalPlans" element={<ArticalPlan />} />
-      <Route path="/OtpV" element={<Otp />} />
+      <Route path="/VerifyOtp" element={<Otp />} />
     </Routes>
   );
 };

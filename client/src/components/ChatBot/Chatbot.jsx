@@ -6,7 +6,7 @@ import { ThemeProvider } from "styled-components";
 const steps = [
   {
     id: "greet",
-    message: "Hello, welcome to our chatbot!",
+    message: "Hello, welcome to chatbot!",
     trigger: "name",
   },
   {
@@ -38,7 +38,7 @@ const steps = [
 
   {
     id: "yes-v",
-    message: "great",
+    message: "Great",
     trigger: "question",
   },
 
@@ -96,7 +96,13 @@ const steps = [
   {
     id: "end-message",
     message: "Thank you for using our chatbot. Have a nice day!",
-    end: true,
+    trigger: "waiting2",
+    end: false,
+  },
+  {
+    id: "waiting2",
+    user: true,
+    trigger: "greet",
   },
 ];
 
@@ -115,9 +121,13 @@ const config = {
   floating: true,
 };
 
+// function GoToPage() {
+//   const navigate = useNavigate();
+//   navigate("/OtpV");
+//   return <p> Redirecting to OTP Verification page</p>;
+// }
 function GoToPage() {
-  const navigate = useNavigate();
-  navigate("/OtpV");
+  window.location.href = window.location.href + "VerifyOtp";
   return <p> Redirecting to OTP Verificatoin page</p>;
 }
 

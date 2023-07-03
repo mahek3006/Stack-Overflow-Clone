@@ -17,17 +17,16 @@ const FeedPost = ({ post }) => {
   const dispatch = useDispatch();
   const User = useSelector((state) => state.currentUserReducer);
   const navigate = useNavigate();
-  const url = "https://stack-overflow-hm.netlify.app";
+  // const url = "https://stack-overflow-hm.netlify.app";
+  // const url = "https://localhost:3000";
 
   const id = post._id;
 
-  // console.log(post.like.includes(User?.result._id));
-  // console.log(User?.result._id);
-
   const handleShare = () => {
-    // console.log(window.location.href + "/" + id);
-    copy(url + location.pathname);
-    alert("Copied url: " + url + location.pathname);
+    copy(window.location.href + "/" + id);
+    alert("Copied url: " + window.location.href + "/" + id);
+    // copy(url + location.pathname);
+    // alert("Copied url: " + url + location.pathname);
   };
 
   useEffect(() => {
@@ -73,7 +72,10 @@ const FeedPost = ({ post }) => {
       {/* card */}
       <div className="card">
         {/* card-container */}
-        <div className="card-container">
+        <div
+          className="card-container"
+          onClick={() => navigate(`/Community/${post._id}`)}
+        >
           {/* card header */}
           <div className="card-header">
             <div className="card-profile">
@@ -126,10 +128,8 @@ const FeedPost = ({ post }) => {
                 >
                   <FontAwesomeIcon
                     icon={faThumbsUp}
-                    color="white"
-                    stroke="red"
+                    color="red"
                     className="material-symbols-outlined-blue"
-                    border
                   />
                 </span>
               ) : (
@@ -144,7 +144,7 @@ const FeedPost = ({ post }) => {
                 <FontAwesomeIcon icon={faShare} />
               </span>
             </div>
-            <p>{post.like.length} Like</p>
+            <p>{post.like.length} Likes</p>
           </div>
         </div>
       </div>

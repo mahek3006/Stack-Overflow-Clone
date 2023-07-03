@@ -25,7 +25,7 @@ function App() {
       <Router>
         <Navbar />
         <AllRoutes />
-        <Chatbot />
+        {/* <Chatbot /> */}
       </Router>
     </div>
   );

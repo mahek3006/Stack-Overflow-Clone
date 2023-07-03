@@ -5,37 +5,40 @@
   width: 50%;
   /* height: max-content; */
   /* margin: 25px auto; */
-  margin: auto;
+  /* margin: auto; */
   border: 1px solid #bbbbbb3f;
-  background-color: #bbbbbb34;
+  background-color: floralwhite;
   border-radius: 5px;
   box-sizing: border-box;
   display: flex;
   justify-content: space-around;
-}
-
-.share-card-container {
   padding: 35px;
   box-shadow: 3px 3px 10px rgb(0 0 0 / 10%), -3px -3px 10px rgb(0 0 0 / 10%);
 }
 
 /*create post*/
 
-/* .create-post{
-    height:68.4vh;
-    padding-top: 180px;
-} */
+.create-post {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
 
-.ask-caption textarea {
+.post-form {
+  width: 100%;
+}
+
+textarea {
   height: 200px;
   padding: 15px;
-  border: solid 1px #0000003e;
   font-family: "Roboto", sans-serif;
-  width: calc(100% - 23px);
-  resize: vertical;
+  width: calc(100% - 30px);
   outline: none;
-  border: none;
   border-radius: 5px;
+  resize: none;
 }
 
 .box-input {
@@ -45,25 +48,27 @@
 }
 
 .image-upload {
-  /* border: 1px solid red; */
   float: left;
-  width: calc(100% - 395px);
-  display: flex;
+  width: 30px;
 }
 
-.image-upload > input {
+.image-upload :hover {
+  cursor: pointer;
+}
+
+/* .image-upload > input {
   display: none;
-}
+} */
 
-.image-upload img {
+/* .image-upload img {
   width: 100%;
   opacity: 0.5;
   transition: 0.3s;
-}
+} */
 
-.image-upload img:hover {
+/* .image-upload img:hover {
   opacity: 1;
-}
+} */
 
 .post-btn {
   float: right;
@@ -91,8 +96,12 @@
   cursor: pointer;
 }
 
-@media only screen and (max-width: 520px) {
+.mediaType {
+  margin: 40px 0px 0px;
+}
+
+/* @media only screen and (max-width: 520px) {
   .box-input .image-upload {
     min-width: 32px;
   }
-}
+} */

@@ -6,7 +6,7 @@ import { Provider } from "react-redux";
 import { legacy_createStore, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
 import Reducer from "./reducers";
-// import Chatbot from "./components/ChatBot/Chatbot";
+import Chatbot from "./components/ChatBot/Chatbot";
 
 const store = legacy_createStore(Reducer, compose(applyMiddleware(thunk)));
 
@@ -16,6 +16,6 @@ root.render(
     <React.StrictMode>
       <App />
     </React.StrictMode>
-    {/* <Chatbot /> */}
+    <Chatbot />
   </Provider>
 );
