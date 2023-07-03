@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useNavigate, useParams, useLocation } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import moment from "moment";
 import copy from "copy-to-clipboard";
@@ -25,9 +25,6 @@ const QuestionDetails = () => {
   const Navigate = useNavigate();
   const dispatch = useDispatch();
   const User = useSelector((state) => state.currentUserReducer);
-  const location = useLocation();
-
-  // const url = "https://stack-overflow-hm.netlify.app/"; //'http://localhost:3000'
 
   const handlePostAns = (e, answerLength) => {
     e.preventDefault();

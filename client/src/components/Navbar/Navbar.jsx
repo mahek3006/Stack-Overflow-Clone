@@ -52,6 +52,7 @@ const Navbar = () => {
       }
     }
     dispatch(setCurrentUser(JSON.parse(localStorage.getItem("Profile"))));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dispatch]);
 
   useEffect(() => {

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import copy from "copy-to-clipboard";
 import moment from "moment";
@@ -13,20 +13,16 @@ import { faShare, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
 
 const FeedPost = ({ post }) => {
   const videoRef = useRef(null);
-  const location = useLocation();
   const dispatch = useDispatch();
   const User = useSelector((state) => state.currentUserReducer);
   const navigate = useNavigate();
-  // const url = "https://stack-overflow-hm.netlify.app";
-  // const url = "https://localhost:3000";
+  // const url = "https://stack-overflow-hm-fe.netlify.app";
 
   const id = post._id;
 
   const handleShare = () => {
     copy(window.location.href + "/" + id);
     alert("Copied url: " + window.location.href + "/" + id);
-    // copy(url + location.pathname);
-    // alert("Copied url: " + url + location.pathname);
   };
 
   useEffect(() => {
