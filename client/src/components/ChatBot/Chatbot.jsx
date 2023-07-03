@@ -1,5 +1,4 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import ChatBot from "react-simple-chatbot";
 import { ThemeProvider } from "styled-components";
 
@@ -121,11 +120,6 @@ const config = {
   floating: true,
 };
 
-// function GoToPage() {
-//   const navigate = useNavigate();
-//   navigate("/OtpV");
-//   return <p> Redirecting to OTP Verification page</p>;
-// }
 function GoToPage() {
   window.location.href = window.location.href + "VerifyOtp";
   return <p> Redirecting to OTP Verificatoin page</p>;
