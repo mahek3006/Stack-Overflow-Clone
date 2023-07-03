@@ -27,7 +27,7 @@ const QuestionDetails = () => {
   const User = useSelector((state) => state.currentUserReducer);
   const location = useLocation();
 
-  const url = "https://stack-overflow-hm.netlify.app/"; //'http://localhost:3000'
+  // const url = "https://stack-overflow-hm.netlify.app/"; //'http://localhost:3000'
 
   const handlePostAns = (e, answerLength) => {
     e.preventDefault();
@@ -61,8 +61,8 @@ const QuestionDetails = () => {
   };
 
   const handleShare = () => {
-    copy(url + location.pathname);
-    alert("Copied url: " + url + location.pathname);
+    copy(window.location.href);
+    alert("Copied url: " + window.location.href);
   };
 
   const handleDelete = () => {

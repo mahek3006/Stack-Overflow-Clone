@@ -1,16 +1,16 @@
-import React from 'react'
+import React from "react";
 
-import './RightSidebar.css'
-import Widget from './Widget'
-import WidgetTags from './WidgetTags'
+import "./RightSidebar.css";
+import Widget from "./Widget";
+import WidgetTags from "./WidgetTags";
 
 const RightSidebar = () => {
   return (
-    <aside className='right-sidebar'> 
+    <aside className="right-sidebar">
       <Widget />
-      <WidgetTags />          
+      <WidgetTags />
     </aside>
-  )
-}
+  );
+};
 
-export default RightSidebar
+export default RightSidebar;

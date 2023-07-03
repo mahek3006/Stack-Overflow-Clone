@@ -10,7 +10,6 @@ import search from "../../assets/search-solid.svg";
 import Avatar from "../../components/Avatar/Avatar";
 
 import "./Navbar.css";
-import { checkAuthentication } from "../../actions/auth";
 
 const Navbar = () => {
   const dispatch = useDispatch();
@@ -43,6 +42,17 @@ const Navbar = () => {
     navigate(location.pathname);
     dispatch(setCurrentUser(null));
   };
+
+  useEffect(() => {
+    const token = User?.token;
+    if (token) {
+      const decodedToken = decode(token);
+      if (decodedToken.exp * 1000 < new Date().getTime()) {
+        handleLogout();
+      }
+    }
+    dispatch(setCurrentUser(JSON.parse(localStorage.getItem("Profile"))));
+  }, [dispatch]);
 
   useEffect(() => {
     const handleResize = () => {

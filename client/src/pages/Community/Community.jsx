@@ -1,29 +1,25 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 import "../../App.css";
 import LeftSidebar from "../../components/LeftSidebar/LeftSidebar";
 import RightSidebar from "../../components/RightSidebar/RightSidebar";
 import CommunityFeed from "../../components/CommunityNavbar/CommunityFeed";
-import { checkAuthentication } from "../../actions/auth";
-import { useDispatch, useSelector } from "react-redux";
-import { useLocation, useNavigate } from "react-router-dom";
-import { setCurrentUser } from "../../actions/currentUser";
 
 const Community = () => {
-  const user = useSelector((state) => state.currentUserReducer);
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
-  const location = useLocation();
+  // const user = useSelector((state) => state.currentUserReducer);
+  // const dispatch = useDispatch();
+  // const navigate = useNavigate();
+  // const location = useLocation();
 
-  useEffect(() => {
-    const authUser = checkAuthentication(user);
-    if (!authUser) {
-      user && alert("Session Timed Out!");
-      dispatch({ type: "LOGOUT" });
-      navigate(location.pathname);
-      dispatch(setCurrentUser(null));
-    }
-  }, [dispatch, location.pathname, navigate, user]);
+  // useEffect(() => {
+  //   const authUser = checkAuthentication(user);
+  //   if (!authUser) {
+  //     user && alert("Session Timed Out!");
+  //     dispatch({ type: "LOGOUT" });
+  //     navigate(location.pathname);
+  //     dispatch(setCurrentUser(null));
+  //   }
+  // }, [dispatch, location.pathname, navigate, user]);
 
   return (
     <div className="home-container-1">

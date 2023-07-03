@@ -4,7 +4,6 @@ import { BrowserRouter as Router } from "react-router-dom";
 
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
-import Chatbot from "./components/ChatBot/Chatbot";
 import AllRoutes from "./AllRoutes";
 
 import { fetchAllQuestions } from "./actions/question";
@@ -25,7 +24,6 @@ function App() {
       <Router>
         <Navbar />
         <AllRoutes />
-        {/* <Chatbot /> */}
       </Router>
     </div>
   );
