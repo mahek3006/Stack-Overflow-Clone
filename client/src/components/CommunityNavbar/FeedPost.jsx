@@ -20,7 +20,8 @@ const FeedPost = ({ post }) => {
 
   const id = post._id;
 
-  const handleShare = () => {
+  const handleShare = (e) => {
+    e.stopPropagation();
     copy(window.location.href + "/" + id);
     alert("Copied url: " + window.location.href + "/" + id);
   };
@@ -50,7 +51,8 @@ const FeedPost = ({ post }) => {
     };
   }, [videoRef]);
 
-  const handleLike = () => {
+  const handleLike = (e) => {
+    e.stopPropagation();
     if (User === null) {
       alert("Login or SignUp for liking any post");
       navigate("/Auth");
@@ -59,7 +61,8 @@ const FeedPost = ({ post }) => {
     }
   };
 
-  const handleUnLike = () => {
+  const handleUnLike = (e) => {
+    e.stopPropagation();
     dispatch(postLiked(id, "unLike", User.result._id));
   };
 
