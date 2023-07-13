@@ -50,7 +50,7 @@ const QueryResponse = ({step, steps, previousStep, triggerNextStep}) => {
 
   useEffect(()=>{
     getResponse(steps.query.value)
-  })
+  },[])
 
   return(
     <div style={{ width: '100%' }}>
