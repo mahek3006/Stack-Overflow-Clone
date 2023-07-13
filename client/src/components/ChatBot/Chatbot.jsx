@@ -50,6 +50,7 @@ const QueryResponse = ({step, steps, previousStep, triggerNextStep}) => {
 
   useEffect(()=>{
     getResponse(steps.query.value)
+    // eslint-disable-next-line
   },[])
 
   return(
