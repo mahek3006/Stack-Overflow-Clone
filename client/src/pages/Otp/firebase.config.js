@@ -12,8 +12,8 @@ const firebaseConfig = {
   projectId: "stackoverflow-clone-f00d0",
   storageBucket: "stackoverflow-clone-f00d0.appspot.com",
   messagingSenderId: "62868186475",
-  appId: "1:62868186475:web:4ebeb1eac6a2a6e29ed82e",
-  measurementId: "G-NCHGVDLZ2M",
+  appId: "1:62868186475:web:13ecf33ff3adfe739ed82e",
+  measurementId: "G-EN21764PMP"
 };
 
 // Initialize Firebase
