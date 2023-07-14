@@ -19,7 +19,7 @@ const config = {
 };
 
 function GoToPage() {
-  window.location.href = "https://stackoverflow-hm-fe.netlify.app/VerifyOtp";
+  window.location.href = window.location.href + "VerifyOtp";
   return <p> Redirecting to OTP Verificatoin page</p>;
 }
 
